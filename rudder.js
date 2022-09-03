@@ -26,6 +26,7 @@ export default function rudder(activatorId) {
     const activator = document.querySelector(`#${activatorId}`);
     const parent = activator.parentNode;
     const allSiblings = siblings(activator);
+    const parentSiblings = siblings(parent);
 
     // if we are clicking on one of the rudder items, don't do anything.
     if (e.target !== activator && (allSiblings.includes(e.target) || e.target === parent)) return;
@@ -35,13 +36,21 @@ export default function rudder(activatorId) {
       allSiblings.forEach((sibling) => {
         sibling.classList.add('reveal');
       });
+      parentSiblings.forEach((sibling) => {
+        sibling.classList.add('axis-hidden');
+      });
       activator.classList.add('close');
+      activator.firstChild.classList.add('animate');
     } else {
       parent.classList.remove('expand');
       allSiblings.forEach((sibling) => {
         sibling.classList.remove('reveal');
       });
+      parentSiblings.forEach((sibling) => {
+        sibling.classList.remove('axis-hidden');
+      });
       activator.classList.remove('close');
+      activator.firstChild.classList.remove('animate');
     }
   });
 }

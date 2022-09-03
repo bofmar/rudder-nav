@@ -1,13 +1,39 @@
 body{
   display: grid;
   place-items: center;
+
+  background-color: rgb(102, 204, 153);
+}
+
+button {
+  all: initial;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+  pointer-events: none;
+  width: 70%;
+  height: 70%;
+
+  transition: rotate 150ms ease-in-out;
 }
 
 .mobile{
   width: 375px;
   height: 650px;
 
-  border: 1px solid black;
+  background-color: #736598;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+
+  main{
+    padding: 0 3rem;
+    text-align: center;
+  }
 
   nav{
     position: fixed;
@@ -15,7 +41,6 @@ body{
 
     width: 375px;
     padding: 0 10px;
-    border: 2px solid red;
 
     display: flex;
     justify-content: space-between;
@@ -31,13 +56,46 @@ body{
     }
 
     .rudder{
-      background-color: green;
+      height: 3rem;
+      width: 3rem;
+      background-color: #93faa5;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      place-items: center;
+
+      transition: all 250ms ease-in-out;
+
+      button{
+        height: 3rem;
+        width: 3rem;
+        text-align: center;
+      }
+    }
+
+    .animate{
+      transform: rotate(45deg);
+      transition: rotate 150ms ease-in-out;
     }
 
     .expand{
       width: 80%;
+      border-radius: 20px;
+
+      transition: all 250ms ease-in-out;
     }
 
+    .axis{
+      width: 2rem;
+      height: 2rem;
+      margin: 0 1.5rem;
+      background-color: #93faa5;
+      border-radius: 50%;
+    }
+
+    .axis-hidden{
+      visibility: hidden;
+    }
 
   }  
 }
