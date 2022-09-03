@@ -1,3 +1,2 @@
-body{
-  background-color: red;
-}
+@use "./components/reset.scss";
+@use "./components/main.scss";

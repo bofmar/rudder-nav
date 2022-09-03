@@ -1,0 +1,33 @@
+body{
+  display: grid;
+  place-items: center;
+}
+
+.mobile{
+  width: 375px;
+  height: 650px;
+
+  border: 1px solid black;
+
+  nav{
+    position: fixed;
+    bottom: 20%;
+
+    width: 375px;
+    padding: 0 10px;
+    border: 2px solid red;
+
+    display: flex;
+    justify-content: space-between;
+
+    .hidden{
+      visibility: hidden;
+      position: absolute;
+    }
+
+    .rudder{
+      background-color: green;
+    }
+
+  }  
+}
