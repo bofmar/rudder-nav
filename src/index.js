@@ -1,3 +1,4 @@
 import './styles/index.scss';
+import rudder from '../rudder';
 
-console.log('this runs');
+rudder('activator');

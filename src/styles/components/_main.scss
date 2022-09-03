@@ -25,9 +25,19 @@ body{
       position: absolute;
     }
 
+    .reveal{
+      visibility: visible;
+      position: initial;
+    }
+
     .rudder{
       background-color: green;
     }
+
+    .expand{
+      width: 80%;
+    }
+
 
   }  
 }
